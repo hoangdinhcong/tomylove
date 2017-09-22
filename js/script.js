@@ -80,3 +80,11 @@ var Page = (function () {
 })();
 
 Page.init();
+
+(function () {
+    todaysDate = moment(new Date());
+    loveDate = moment([2015,1,13]); // 13-02-2015
+    var diffDays = todaysDate.diff(loveDate, 'days');
+
+    $('#love-days').html(`${diffDays} days of love`);
+})();
